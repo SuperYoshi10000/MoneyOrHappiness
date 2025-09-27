@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://bdj3fi1g6mrjl"]
+
+[node name="Inventory" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 64.0
+offset_right = 352.0
+offset_bottom = 256.0
+
+[node name="Title" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 24.0
+offset_right = 320.0
+offset_bottom = 64.0
+text = "Inventory"
+horizontal_alignment = 1
+vertical_alignment = 1

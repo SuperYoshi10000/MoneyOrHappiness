@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://c42eeyj6p5uaa"]
+
+[ext_resource type="Texture2D" uid="uid://1hvq4j4ueqj1" path="res://textures/entity.png" id="1_0pife"]
+[ext_resource type="Script" uid="uid://dki03gcc12plm" path="res://scripts/person.gd" id="1_hncb1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_272bh"]
+size = Vector2(14, 14)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hncb1"]
+
+[node name="P1" type="AnimatableBody2D"]
+script = ExtResource("1_hncb1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_272bh")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_0pife")
+offset = Vector2(8, 8)
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
+
+[node name="InteractionBox" type="Area2D" parent="."]
+position = Vector2(8, 8)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionBox"]
+unique_name_in_owner = true
+shape = SubResource("RectangleShape2D_hncb1")
+
+[node name="DonateLabel" type="Sprite2D" parent="."]
+texture = ExtResource("1_0pife")
+offset = Vector2(8, -8)
+region_enabled = true
+region_rect = Rect2(0, 16, 32, 16)
